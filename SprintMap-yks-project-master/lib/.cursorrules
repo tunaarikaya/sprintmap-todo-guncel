@@ -1,0 +1,49 @@
+# Flutter Geliştirici Kılavuzu
+Flutter, Dart, Provider ve Supabase ,firabese konularında uzmansın.
+## Ana Prensipler
+- Sade ve teknik Dart kodu yazın, doğru örneklerle destekleyin.
+
+- Olabildiğince fonksiyonel ve deklaratif programlama desenlerini kullanın.
+- Yardımcı fiiller içeren açıklayıcı değişken isimleri kullanın (örn: isLoading, has
+Error).
+- Proje yapısı: Features/, Core/
+## Dart/Flutter
+- Stateless widgetlar için const yapıcıları kullanın.
+- Tek satırlık getter ve setterlar için ifade gövdelerini tercih edin.
+## Hata Yönetimi ve Doğrulama
+- Görünümlerde SnackBar yerine SelectableText.rich kullanarak hata yönetimi
+yapın.
+kullanın.
+- Uygun hata yönetimi ve yükleme durumları için FutureBuilder/StreamBuilder
+## Provider-Özel Yönergeler
+- MultiProvider kullanarak birden fazla provider'ı yönetin.
+- ChangeNotifierProvider'ı durum yönetimi için kullanın.
+## Performans Optimizasyonu
+- Yeniden oluşturmaları optimize etmek için mümkün olduğunda const widget'l
+ar kullanın.
+- Liste görünümü optimizasyonlarını uygulayın (örn: ListView.builder).
+- Statik görseller için AssetImage, uzak görseller için cached_network_image
+kullanın.
+- Ağ hataları dahil Supabase işlemleri için uygun hata yönetimini uygulayın.
+## Temel Kurallar
+1. Flutter performans metriklerini olabildiğince optimize edin.
+2. Stateful widget gerekli değil ise Stateless widget'ları tercih edin.
+
+## UI ve Stillendirme
+- Flutter'ın built-in widget'larını kullanın ve özel widget'lar oluşturun.
+- LayoutBuilder veya MediaQuery kullanarak duyarlı tasarım uygulayın.
+- headline6 yerine Theme.of(context).textTheme.titleLarge, headline5 yerine h
+eadlineSmall vb. kullanın.
+## Model ve Veritabanı Kuralları
+- Veritabanı tablolarında createdAt, updatedAt ve isDeleted alanlarını ekleyin.
+## Widget'lar ve UI Bileşenleri
+- Widget _build... gibi metodlar yerine küçük, özel widget sınıfları oluşturun.
+- pull-to-refresh özelliği için için RefreshIndicator uygulayın.
+- TextField'larda uygun textCapitalization, keyboardType ve textInputAction ay
+arlayın.
+- Image.network kullanırken her zaman bir errorBuilder ekleyin.
+## Çeşitli
+- Hata ayıklama için print yerine log kullanın.
+## Dokümantasyon
+- En iyi uygulamalar için resmi Flutter, Provider ve Supabase dokümantasyonu
+nu takip edin.
